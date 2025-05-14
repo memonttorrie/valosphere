@@ -47,10 +47,14 @@
         <h2>Student Login</h2>
         <div class="form-container">
             <div id="studentStep1" class="form-step active">
+                <label for="studentName" style="align-self: flex-start; margin-bottom: 0.2rem;">Name</label>
                 <input type="text" placeholder="Enter student name" id="studentName">
+                <label for="email" style="align-self: flex-start; margin-bottom: 0.2rem;">Email</label>
+                <input type="text" placeholder="Enter Email" id="email">
+                <label for="school" style="align-self: flex-start; margin-bottom: 0.2rem;">School</label>
+                <input type="text" placeholder="Enter School" id="school">
                 <div class="form-navigation"></div>
             </div>
-            <input type="text" placeholder="Enter Email" id="email">
             <div class="form-navigation">
                 <button onclick="prevStep('studentStep2', 'studentStep1')">Back</button>
                 <button onclick="loginStudent()">Login</button>
