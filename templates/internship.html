@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabConnect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='internship.png') }}" alt="Logo">
+        </div>
+        <ul class="nav-links">
+        </ul>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Find and apply for internship opportunities that match your skills and goals.</h1>
+            <p>Connect with companies, submit your resume, and track your application—all in one place.</p>
+        </div>
+    </section>
+
+    <!--ABOUT US SECTION-->
+    <section id="About" class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Are you ready to take the next step toward your future career? Our Internship Portal connects passionate students with exciting internship opportunities across various industries. Whether you're looking to gain hands-on experience, build your resume, or discover your career path, this platform is designed to help you succeed.<br>
+                <br> Students can browse available internships, apply online, and track their application status with ease. On the other side, administrators can manage listings, review applications, and communicate decisions—all in one streamlined dashboard.
+                <br>Join us in bridging the gap between education and employment. Your journey starts here!</p>
+            </div>
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='interns.webp') }}" alt="internship Image">
+            </div>
+        </div>
+    </section>
+    
+    <nav>
+        <button onclick="showSection('studentLogin')">Student Login</button>
+        <button onclick="showSection('adminLogin')">Admin Login</button>
+    </nav>
+
+    <!-- Student Login Form -->
+    <div id="studentLogin" class="section">
+        <h2>Student Login</h2>
+        <div class="form-container">
+            <div id="studentStep1" class="form-step active">
+                <input type="text" placeholder="Enter student name" id="studentName">
+                <div class="form-navigation">
+                </div>
+            </div>
+            <input type="text" placeholder="Enter Email" id="email">
+            <div class="form-navigation">
+                <button onclick="prevStep('studentStep2', 'studentStep1')">Back</button>
+                <button onclick="loginStudent()">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Form -->
+    <div id="adminLogin" class="section">
+        <h2>Admin Login</h2>
+        <div class="form-container">
+            <div id="adminStep1" class="form-step active">
+                <input type="text" placeholder="Enter Admin Name" id="adminame">
+                <div class="form-navigation">
+                </div>
+            </div>
+            <input type="text" placeholder="Enter admin code" id="adminCode">
+            <div class="form-navigation">
+                <button onclick="prevStep('adminStep2', 'adminStep1')">Back</button>
+                <button onclick="loginAdmin()">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="studentDashboard" class="section">
+        <h2>Available Internships</h2>
+        <div class="internship-list" id="internshipList"></div>
+        <h3>Your Application Status</h3>
+        <div id="studentNotifications"></div>
+    </div>
+
+    <div id="applicationForm" class="section">
+        <h2>Apply for Internship</h2>
+        <div class="form">
+            <input type="text" id="resumeLink" placeholder="Link to Resume">
+            <textarea id="coverLetter" placeholder="Cover Letter"></textarea>
+            <button onclick="submitApplication()">Submit Application</button>
+        </div>
+    </div>
+
+    <div id="adminDashboard" class="section">
+        <h2>Student Applications</h2>
+        <div id="submissions"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><img src="{{ url_for('static', filename='facebook.jpg') }}" alt="Facebook"></a>
+            <a href="#"><img src="{{ url_for('static', filename='x.jpg') }}" alt="Twitter"></a>
+            <a href="#"><img src="{{ url_for('static', filename='in.jpg') }}" alt="LinkedIn"></a>
+        </div>
+        <p>© 2025 Jose Rizal University. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

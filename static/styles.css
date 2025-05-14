@@ -1,0 +1,362 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efb60b;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0c2b88;
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header .logo {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+nav button {
+    margin: 0;
+    padding: 1rem 2rem;
+    text-decoration: solid;
+    border: 2px solid rgb(4, 10, 88);
+    font-size: 1.3rem;
+    background-color: #0c2b88;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #053964;
+}
+
+.section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.form-step {
+    display: none;
+    width: 100%;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0c2b88;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #053964;
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    gap: 1rem;
+}
+
+.form-navigation button {
+    width: 48%;
+}
+
+.internship-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.internship {
+    background-color: #053964;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    margin: 0;
+    width: calc(33.333% - 2rem);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    color: white;
+    text-align: left;
+}
+
+.internship h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.internship p {
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.internship button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #efb60b;
+    color: #0c2b88;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.internship button:hover {
+    background-color: #d4a009;
+}
+
+.form input, 
+.form textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form button {
+    padding: 0.8rem;
+    width: 100%;
+    background-color: #0c2b88;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #053964;
+}
+
+.student-submission, 
+.admin-view {
+    background: #ffffff;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.notification {
+    background-color: #03529c;
+    border-left: 6px solid #2196F3;
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    color: white;
+    text-align: left;
+    border-radius: 4px;
+}
+
+.admin-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.admin-buttons button {
+    padding: 0.5rem 1rem;
+    background-color: #0c2b88;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-buttons button:hover {
+    background-color: #053964;
+}
+
+.hero {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0c2b88;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h2 {
+    color: #0c2b88;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #333;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.footer {
+    background-color: #0c2b88;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .internship {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .internship {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav button {
+        width: 100%;
+    }
+} 
