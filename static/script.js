@@ -39,11 +39,14 @@ function prevStep(currentStepId, prevStepId) {
 }
 
 function loginStudent() {
-    studentName = document.getElementById('studentName').value;
-    if (studentName.trim() !== "") {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    if (username.trim() !== "" && password.trim() !== "") {
         showSection('studentDashboard');
         displayInternships();
         displayNotifications();
+    } else {
+        alert('Please enter both username and password.');
     }
 }
 
